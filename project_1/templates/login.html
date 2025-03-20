@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+ <html lang="en">
+ 	<head>
+ 		<meta charset="UTF-8" />
+ 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+ 		<title>Login</title>
+ 	</head>
+ 	<body class="flex items-center justify-center min-h-screen bg-gray-100">
+ 		<div class="w-full max-w-md p-6 bg-white rounded-lg shadow-md">
+ 			<h2 class="text-3xl font-bold text-green-600 text-center">Login</h2>
+ 
+ 			<!-- 
+ 				Don't worry too much about the Tailwind code! 
+ 				It just makes things look nicer without writing extra CSS. 
+ 				For example, `class="bg-gray-100 p-4 rounded-lg"` means:
+ 				- `bg-gray-100` → Light gray background
+ 				- `p-4` → Padding of 4 units
+ 				- `rounded-lg` → Rounded corners 
+ 			-->
+ 
+ 			<!-- LOGIN FORM -->
+ 			<!-- 
+ 			How the login form successfully sends data to backend
+ 			1. The `action="/login"` means that when you submit this form, 
+ 			   the data will be sent to the "/login" route on your server.
+ 			2. The `method="POST"` ensures that the data is sent securely 
+ 			   inside the request body instead of being exposed in the URL.
+ 		-->
+ 			<form action="/login" method="post" class="mt-6">
+ 				<h3 class="text-lg font-semibold mb-2">Get back to your account</h3>
+ 
+ 				<label for="username" class="block text-gray-700">Username:</label>
+ 				<input
+ 					type="text"
+ 					id="username"
+ 					name="username"
+ 					required
+ 					class="w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500"
+ 				/>
+ 
+ 				<label for="password" class="block text-gray-700 mt-4">Password:</label>
+ 				<input
+ 					type="password"
+ 					id="password"
+ 					name="password"
+ 					required
+ 					class="w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500"
+ 				/>
+ 
+ 				<button type="submit" class="w-full mt-4 bg-green-600 text-white py-2 rounded-md hover:bg-green-700 transition">Login</button>
+ 			</form>
+ 
+       
+ 
+ 			<!-- SIGNUP FORM -->
+ 			<!-- 
+ 			How the signup sends new users to backend
+ 			- This form allows new users to create an account.
+ 			- The `action="/signup"` sends the data to the "/signup" route.
+ 			- Like the login form, it also uses `POST` to keep user details safe.
+ 		-->
+ 			<form action="/signup" method="post" class="mt-8">
+ 				<h3 class="text-lg font-semibold mb-2">Create a new account</h3>
+ 
+ 				<label for="signup_username" class="block text-gray-700">Username:</label>
+ 				<input
+ 					type="text"
+ 					id="signup_username"
+ 					name="username"
+ 					required
+ 					class="w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500"
+ 				/>
+ 
+ 				<label for="signup_password" class="block text-gray-700 mt-4">Password:</label>
+ 				<input
+ 					type="password"
+ 					id="signup_password"
+ 					name="password"
+ 					required
+ 					class="w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500"
+ 				/>
+ 
+ 				<button type="submit" class="w-full mt-4 bg-blue-600 text-white py-2 rounded-md hover:bg-blue-700 transition">Signup</button>
+ 			</form>
+ 		</div>
+ 	</body>
+ </html>
